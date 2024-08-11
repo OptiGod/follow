@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>realdouble_s 맞팔 요청하기</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("FtA0dRWvrc3kaupFz"); 
+    })();
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>팔로우 요청하기<h1>
+    <form id="orderForm">
+      <label for="milkType">종류:</label>
+      <select id="milkType" name="milkType">
+        <option value="10+">10분 지남</option>
+        <option value="10-">10분 안지남</option>
+      </select>
+      <label for="quantity">닉네임</label>
+      <input type="text" id="quantity" name="quantity" max="1" value="1">
+      <button type="submit">요청하기</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
