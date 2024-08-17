@@ -1,35 +1,42 @@
-/* General styling */
+/* General Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(180deg, #e9f0ff, #f8fbff);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0;
-  background: linear-gradient(180deg, #e9f0ff, #f8fbff);
+  padding: 20px; /* Added padding to prevent content from touching screen edges */
 }
 
-/* Container styling */
+/* Container Styling */
 .container {
   background: #ffffff;
-  padding: 40px;
+  padding: 40px 20px;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 600px;  /* Ensure the container isn't too wide */
   width: 100%;
-  text-align: center;  /* Center the contents */
-  box-sizing: border-box;
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-/* Logo styling */
+/* Logo Styling */
 .logo {
-  width: 432px;
-  height: 90px;
-  margin: 0 auto 20px auto;  /* Centering the logo */
+  width: 100%;
+  max-width: 432px;
+  height: auto;
+  margin: 0 auto 20px auto;
   display: block;
 }
 
-/* Title styling */
+/* Title Styling */
 h1 {
   color: #202124;
   font-size: 24px;
@@ -37,13 +44,13 @@ h1 {
   font-weight: 500;
 }
 
-/* Form group styling */
+/* Form Group Styling */
 .form-group {
   margin-bottom: 25px;
   text-align: left;
 }
 
-/* Label styling */
+/* Label Styling */
 label {
   display: block;
   margin-bottom: 8px;
@@ -51,28 +58,29 @@ label {
   color: #5f6368;
 }
 
-/* Input and select styling */
-select, input {
+/* Input and Select Styling */
+select,
+input {
   width: 100%;
   padding: 14px;
-  border: none;
+  border: 1px solid #dadce0;
   border-radius: 8px;
   font-size: 16px;
   color: #202124;
   background: #f1f3f4;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-sizing: border-box;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Focused state styling */
-select:focus, input:focus {
+/* Focused State Styling */
+select:focus,
+input:focus {
   background: #fff;
   outline: none;
+  border-color: #1a73e8;
   box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.3);
 }
 
-/* Button styling */
+/* Button Styling */
 button {
   width: 100%;
   padding: 14px;
@@ -86,8 +94,25 @@ button {
   box-shadow: 0 3px 10px rgba(26, 115, 232, 0.3);
 }
 
-/* Button hover state */
+/* Button Hover State */
 button:hover {
   background: linear-gradient(90deg, #185abc, #357ae8);
   box-shadow: 0 4px 12px rgba(26, 115, 232, 0.4);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 25px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 12px;
+  }
 }
