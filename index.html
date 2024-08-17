@@ -1,38 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>realdouble_s 맞팔 요청하기</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script type="text/javascript">
-    (function() {
-      emailjs.init("FtA0dRWvrc3kaupFz"); 
-    })();
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팔로우 요청하기 v1.1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-  <div class="container">
-    <!-- Logo image -->
-    <img src="logo.png" alt="Logo" class="logo">
-    
-    <h1>팔로우 요청하기</h1>
-    <form id="orderForm">
-      <div class="form-group">
-        <label for="milkType">종류:</label>
-        <select id="milkType" name="milkType">
-          <option value="10+">10분 지남</option>
-          <option value="10-">10분 안지남</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="quantity">닉네임:</label>
-        <input type="text" id="quantity" name="quantity">
-      </div>
-      <button type="submit">요청하기</button>
-    </form>
-  </div>
-  <script src="script.js"></script>
+    <div class="container">
+        <img src="logo.png" alt="로고" class="logo">
+        <h1>팔로우 요청하기</h1>
+        <form id="orderForm">
+            <label for="milkType">종류:</label>
+            <select id="milkType" name="milkType">
+                <option value="10+">10분 지남</option>
+                <option value="10-">10분 안지남</option>
+            </select>
+
+            <label for="quantity">닉네임:</label>
+            <input type="text" id="quantity" name="quantity" max="1" value="1">
+
+            <div class="g-recaptcha" data-sitekey="6LcI0CgqAAAAAGhrx0lx1Ty2BMxoSYZhL-56F1eU"></div>
+
+            <button type="submit">요청하기</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
